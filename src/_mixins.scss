@@ -1,33 +1,28 @@
 @mixin backImage($image, $height: 500px) {
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, .6)), url($image);
+    background: url($image);
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: cover;
+    background-size: auto;
+    height: $height;
+    position: relative;
+}
+
+@mixin backMediaImage($image, $height: 36px) {
+    background: url($image);
     height: $height;
 }
 
-@mixin clearfix {
-    &:before,
-    &:after {
-        content: '';
-        display: table;
-    }
-    &:after {
-        clear: both;
-    }
+@mixin backProductImage($image, $height: 170px) {
+    background-image: url($image);
+    background-repeat: no-repeat;
+    background-position: left left;
+    position: relative;
+    height: $height;
 }
 
-//using math operation for grid on index
-@mixin imageGrid($qty, $margin) {
-    width: ((100% - (($qty - 1) * $margin)) / $qty);
-    &:nth-child(n) {
-        margin-bottom: $margin;
-        margin-right: $margin;
-    }
-    &:nth-child(#{$qty}n) {
-        margin-bottom: 0;
-        margin-right: 0;
-    }
+//using math operation 
+@mixin combineWidth($width) {
+    width: ($width + 230px);
 }
 
 @mixin break($args...) {

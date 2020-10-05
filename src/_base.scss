@@ -13,6 +13,7 @@ body {
 }
 
 header {
+    @include backImage('../images/devices.png');
     width: inherit;
     clear: both;
     text-align: center;
@@ -66,7 +67,8 @@ header {
         font-weight: 400;
     }
     #products {
-        width: 460px;
+        // width: 460px;
+        @include combineWidth(230px);
         float: left;
     }
     #products img {
@@ -103,6 +105,7 @@ footer {
 }
 
 .social-media {
+    @include backMediaImage('../images/social-media.png');
     margin: 0 auto;
     width: 165px;
     .social-media div {
@@ -127,4 +130,8 @@ footer {
     .social-media div.four {
         background: url('../images/social-media.png') -114px 0;
     }
+}
+
+article {
+    @include backProductImage('../images/vprospect.png');
 }
