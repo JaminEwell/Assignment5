@@ -1,38 +1,32 @@
-@mixin backImage($image, $height: 500px) {
-    background: url($image);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: auto;
-    height: $height;
-    position: relative;
-}
-
-@mixin backMediaImage($image, $height: 36px) {
-    background: url($image);
+@mixin wt_and_ht($width, $height) {
+    width: $width;
     height: $height;
 }
 
-@mixin backProductImage($image, $height: 170px) {
-    background-image: url($image);
-    background-repeat: no-repeat;
-    background-position: left left;
-    position: relative;
-    height: $height;
+@mixin socialMediaImg($offest : 0px) {
+    background: url($socialMediaImg) -38px * $offest 0;
 }
 
-//using math operation 
-@mixin combineWidth($width) {
-    width: ($width + 230px);
+@mixin navbar($width, $height, $float) {
+    @include wt_and_ht($width, $height);
+    float: $float;
 }
 
-@mixin break($args...) {
+@mixin headers($color, $fnt-wt, $fnt-size, $li-ht: 0) {
+    color: $color;
+    font-weight: $fnt-wt;
+    font-size: $fnt-size;
+    line-height: $li-ht;
+}
+
+@mixin contentStyles($width, $float) {
+    width: $width;
+    float: $float;
+}
+
+@mixin insertMediaQuery($args) {
     @if length($args)==1 {
-        @media (min-width: nth($args, 1)) {
-            @content;
-        }
-    }
-    @else {
-        @media (min-width: nth($args, 1)) and (max-width: nth($args, 2)) {
+        @media (max-width: nth($args, 1)) {
             @content;
         }
     }

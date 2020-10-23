@@ -1,28 +1,9 @@
-// LOAD FONTS
-@import url('https://fonts.googleapis.com/css?family=Hepta+Slab|Oswald&display=swap');
-$background : #EEE8D6; // BIEGE COLOR
-$text-color : #022933;
-$darkblue : #001e25;
-$red : #D14348;
-$blue : #0076A3;
-$yellow : #FFBA00;
-$green : #548C27;
-$purple : #6D73C2;
-$orange : #F39856;
-$grey: #666;
+$red: #E65C43;
 $white: #FFF;
-$redheadline: #F25C43;
-$redheader: #E65C43;
-$lightgrey: #F5F6F6;
-$mediablue: #30353D;
-$font-body : 'Hepta Slab';
-$font-headings: Oswald,
-helvetica,
-sans-serif;
-$font-family: 'Roboto',
-'sans-serif';
-// COLORS FOR MEDIA
-$color-item-border: $red;
-$color-media-head: $blue;
-$color-media-greybar: $lightgrey;
-$color-media-footer: $mediablue;
+$gray: #666;
+$bodyFont: 'Roboto';
+$bodyBgImg: '../images/bg.gif';
+$logoImg: '../images/logo.png';
+$socialMediaImg: '../images/social-media.png';
+$graybarBg:#F5F6F6;
+$headlineBg: #F25C43;
